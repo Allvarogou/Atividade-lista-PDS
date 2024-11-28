@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerTela2">
+   <children>
+      <AnchorPane layoutX="1.0" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <Pane layoutX="2.0" layoutY="37.0" prefHeight="363.0" prefWidth="600.0">
+               <children>
+                  <Label fx:id="lblNome" layoutX="13.0" layoutY="14.0" prefHeight="17.0" prefWidth="82.0" text="Nome" textAlignment="CENTER" />
+                  <TextField fx:id="nome" layoutX="64.0" layoutY="10.0" onAction="#OnClicktxtnome" />
+                  <Label fx:id="lblSo" layoutX="14.0" layoutY="50.0" prefHeight="17.0" prefWidth="117.0" text="Sistema Operacional" textAlignment="CENTER" />
+                  <Button fx:id="window" layoutX="155.0" layoutY="46.0" mnemonicParsing="false" onAction="#OnClickBtnwdw" text="Windows" />
+                  <Button fx:id="Linux" layoutX="239.0" layoutY="46.0" mnemonicParsing="false" onAction="#OnClickBtnlinux" text="Linux" />
+                  <Button fx:id="Mac" layoutX="307.0" layoutY="46.0" mnemonicParsing="false" onAction="#OnClickBtnmac" text="Mac" />
+                  <Label fx:id="lblLing" layoutX="14.0" layoutY="108.0" prefHeight="17.0" prefWidth="183.0" text="Linguagem com maior afinidade" textAlignment="CENTER" />
+                  <RadioButton fx:id="java" layoutX="206.0" layoutY="108.0" mnemonicParsing="false" onAction="#OnClickRdjava" text="Java" />
+                  <RadioButton fx:id="C" layoutX="271.0" layoutY="108.0" mnemonicParsing="false" onAction="#OnClickRdC" text="C" />
+                  <RadioButton fx:id="Python" layoutX="331.0" layoutY="108.0" mnemonicParsing="false" onAction="#OnClickRdPython" text="Python" />
+                  <CheckBox fx:id="progalld" layoutX="13.0" layoutY="182.0" mnemonicParsing="false" onAction="#OnClickCbprogd" prefHeight="17.0" prefWidth="229.0" text="Programa todo dia?" />
+                  <CheckBox fx:id="GP" layoutX="13.0" layoutY="215.0" mnemonicParsing="false" onAction="#OnClickCbGP" text="Gosto de programação?" />
+                  <Button fx:id="Sub" layoutX="39.0" layoutY="287.0" mnemonicParsing="false" onAction="#OnClickBtnSub" text="Submeter Pesquisa" />
+               </children>
+            </Pane>
+            <Label layoutX="235.0" layoutY="14.0" prefHeight="17.0" prefWidth="174.0" text="Pesquisa progaramção" textAlignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
