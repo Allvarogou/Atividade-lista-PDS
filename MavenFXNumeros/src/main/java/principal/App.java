@@ -14,12 +14,12 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/SomarView.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/PrincipalView.fxml"));
         Parent root = loader.load();
 
         Scene scene = new Scene(root);
 
-        stage.setTitle("Somar Números");
+        stage.setTitle("Nossa aplicação");
         stage.setScene(scene);
         stage.show();
 

@@ -1,11 +1,10 @@
 package controller;
 
-import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -13,7 +12,9 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
-public class SomarController {
+public class SomarController implements Initializable {
+    
+    private Stage StageSomar;
     
     @FXML
     private Button btnLimpar;
@@ -22,9 +23,6 @@ public class SomarController {
     private Button btnSomar;
     @FXML
     private Button btnFechar;
-    
-    @FXML
-    private Button btnTela2;
 
     @FXML
     private Label lblNumero1;
@@ -75,27 +73,17 @@ public class SomarController {
 
     @FXML
     void onClickBtnFechar(ActionEvent event) {
-            System.exit(0);
-    }
-    
-    @FXML
-    void onClickbtnTela2(ActionEvent event) throws IOException {
-        
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/Tela2.fxml"));
-        Parent root = loader.load();
-
-        Stage stage = new Stage();
-        
-        ControllerTela2 ct2 = loader.getController();
-       
-        
-        Scene scene = new Scene(root);
-
-        stage.setTitle("Pesquisa sobre programção");
-        stage.setScene(scene);
-        stage.show();
-
+            if (StageSomar != null) {
+            StageSomar.close();
+        }
     }
 
+    public void setStage(Stage stage){
+    this.StageSomar = stage;
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+    }
 
 }

@@ -75,7 +75,6 @@
                      </font></Button>
                </children>
             </GridPane>
-            <Button fx:id="btnTela2" mnemonicParsing="false" onAction="#onClickbtnTela2" text="Next" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
          </children>
       </GridPane>
    </children>
